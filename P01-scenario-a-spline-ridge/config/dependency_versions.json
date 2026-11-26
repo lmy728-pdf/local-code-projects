@@ -1,0 +1,13 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "logical_cpus": 32,
+  "affinity": 32,
+  "cpu_quota": null,
+  "available_cpus": 32,
+  "memory_gib": 55.68801498413086,
+  "free_disk_gib": 43.40900802612305,
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.1"
+}

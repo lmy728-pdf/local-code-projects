@@ -1,0 +1,93 @@
+{
+  "title": "Rank-DML Scenario C",
+  "paper": "sources/Rank DML.tex",
+  "paper_sections": [
+    "Section 4, Theorem thm:truncated and Proposition prop:lsfail",
+    "Section 6, Scenario C",
+    "Appendix, Wilcoxon drift expansion and rare alignment errors"
+  ],
+  "sample_sizes": [
+    500,
+    1000,
+    2000,
+    4000,
+    8000
+  ],
+  "theta0": 0,
+  "folds": 5,
+  "replications": {
+    "smoke": [
+      [
+        "C1",
+        500,
+        5
+      ],
+      [
+        "C1",
+        8000,
+        2
+      ],
+      [
+        "C2",
+        500,
+        5
+      ]
+    ],
+    "pilot_per_cell": 100,
+    "main_per_cell": 2000
+  },
+  "workers_max": 12,
+  "threads_per_worker": 1,
+  "namespace": "rank-dml-scenario-c-v1",
+  "master_seed": 20261119,
+  "seed_derivation": "SHA256 JSON [namespace, master, stage, case, n, rep, stream] to uint32 SeedSequence; 0-based replication",
+  "C1": {
+    "X": "Uniform(0,1)",
+    "D": "v",
+    "Y": "epsilon",
+    "innovations": "Independent standard normals independent of X",
+    "rare": "X <= n^(-3/4)",
+    "nuisance_truth": "m0=ell0=0",
+    "prediction": "mhat=indicator, ellhat=sqrt(n)*indicator"
+  },
+  "C2": {
+    "status": "Pre-specified implementation convention",
+    "X1": "t(3)/sqrt(3)",
+    "X2_to_X10": "Independent standard normals",
+    "rare": "X1 exceeds t(3) upper-tail quantile of probability n^(-3/4), scaled by sqrt(3)",
+    "m0": "-indicator",
+    "ell0": "-sqrt(n)*indicator",
+    "D": "m0+v",
+    "Y": "ell0+epsilon",
+    "innovations": "Independent standard normals independent of X",
+    "learner": "Scenario A Spline Ridge. Squared loss. 5 equally spaced clamped cubic knots per covariate incl training endpoints. 10 raw interactions among first 5 covariates. Training standardization and GCV over [0.1,1,10,100] separately for D/Y. Linear boundary extrapolation.",
+    "diagnostic_grid": "Independent stage/n-seeded scrambled Sobol. 1024 points conditional inside and 1024 outside; known region probabilities for full risks."
+  },
+  "methods": {
+    "OLS": "Fold intercepts and sandwich",
+    "Rank-W": "Exact paper Q_n; monotone right subgradient computed by sorting; bracket tolerance 1e-12; five-point slope c=2; V=mean(w²)/(12 Gamma²)",
+    "Huber": "Scenario A IRLS sandwich, fold-specific threshold 1.345 × scaled MAD from training-only inner three-fold W residuals; deterministic residuals in C1",
+    "LAD": "Scenario A tau=.5 LP and KDE sandwich"
+  },
+  "metrics": {
+    "coverage": "all replications, invalid counts as uncovered",
+    "calibration": "median SE / empirical SD; IQR version also provided"
+  },
+  "paper_sha256": "edb5b604cf2c3d0d3678dcff4d51679965bd1efefe5cb3821fdc7ec91706b38c",
+  "successful_python_environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "pandas": "2.3.3",
+    "Pillow": "12.2.0",
+    "psutil": "7.2.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "figure_delivery": {
+    "format": "PDF",
+    "embedded_images_dpi": 300,
+    "count": 4
+  }
+}

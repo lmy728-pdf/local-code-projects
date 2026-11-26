@@ -1,0 +1,8 @@
+dir.create('R_library', showWarnings=FALSE)
+.libPaths(c(normalizePath('R_library'), .Library))
+options(repos=c(CRAN='https://mirrors.tuna.tsinghua.edu.cn/CRAN/'),timeout=120)
+install.packages(c('np','jsonlite'),lib=.libPaths()[1],type='binary',dependencies=NA)
+stopifnot(requireNamespace('np',quietly=TRUE),requireNamespace('jsonlite',quietly=TRUE))
+capture.output(sessionInfo(),file='r_install_session.txt')
+write.csv(as.data.frame(installed.packages()[,c('Package','Version','LibPath','Built')]),'r_package_versions.csv',row.names=FALSE)
+cat('R and packages ready\n')

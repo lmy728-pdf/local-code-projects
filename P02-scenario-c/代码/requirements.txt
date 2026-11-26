@@ -1,0 +1,10 @@
+numpy==2.3.5
+scipy==1.17.1
+matplotlib==3.10.9
+pandas==2.3.3
+psutil==7.2.2
+tqdm==4.67.3
+threadpoolctl==3.6.0
+nbformat==5.10.4
+ipykernel==6.29.5
+Pillow==12.2.0

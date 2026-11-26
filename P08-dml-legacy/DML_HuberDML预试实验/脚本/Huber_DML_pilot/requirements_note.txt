@@ -1,0 +1,5 @@
+Use existing interpreter: D:/Anoconda/envs/environment2/python.exe
+Original environment: Python 3.11.15; numpy 2.3.5; scipy 1.17.1; scikit-learn 1.7.2; joblib 1.5.3.
+Also uses existing pandas, matplotlib, threadpoolctl.
+No automatic pip installation or upgrade. Runtime checks original numerical library versions.
+No R dependency. No simulation has been executed for this delivery.

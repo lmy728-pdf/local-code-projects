@@ -1,0 +1,15 @@
+{
+  "python": "3.11.15",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "verified_interpreter": "D:\\Anoconda\\envs\\environment2\\python.exe",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.10.9",
+    "tqdm": "4.67.3",
+    "threadpoolctl": "3.6.0",
+    "ipykernel": "6.29.5"
+  }
+}

@@ -1,0 +1,11 @@
+# Local environments and generated files
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+*.sqlite
+*.sqlite3
+*.log
+*.pyc

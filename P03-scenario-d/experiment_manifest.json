@@ -1,0 +1,62 @@
+{
+  "paper": "sources/Rank DML.tex",
+  "paper_requirements": {
+    "designs": [
+      "D1 X-dependent scale",
+      "D2 mirror skewness",
+      "D3 D-dependent symmetric scale"
+    ],
+    "R_main_per_case": 2000,
+    "folds": 5,
+    "estimator_section": "Section 6 Estimators compared",
+    "rank_ad": {
+      "L_max": 6,
+      "eta": 0.1,
+      "c": 2,
+      "information_correction": "leave-one-fold cross-information, floor at I1/2, then cumulative maximum",
+      "intervals": [
+        "Wald",
+        "Gaussian max-t"
+      ]
+    }
+  },
+  "implementation": {
+    "sample_sizes": [
+      500,
+      1000,
+      2000
+    ],
+    "R_smoke_per_case": 4,
+    "R_pilot_per_case": 100,
+    "R_main_total": 18000,
+    "D1": {
+      "scale": "0.5 if X1<0, else 2; divide by sqrt(2.125) for unit marginal variance",
+      "theta": 1,
+      "m": "paper scalar default",
+      "g": "paper scalar default",
+      "v": "independent N(0,1)",
+      "learner": "Scenario A cubic spline 5 knots including endpoints, 10 interactions, GCV [0.1,1,10,100], squared loss with separate outcomes"
+    },
+    "D2": {
+      "theta": 0,
+      "D": "Rademacher",
+      "epsilon": "D*(Exp(1)-1)",
+      "nuisances": "known zero, no X"
+    },
+    "D3": {
+      "theta": 0,
+      "D": "Rademacher",
+      "epsilon": "2Z if D=1, else 0.5Z",
+      "nuisances": "known zero, no X",
+      "odd_only": "same tolerance and correction on degrees 1,3,5",
+      "mixed": "fixed J1+J2 one-step from Rank-W; both moment root and one-step limit reported"
+    },
+    "max_t_draws": 50000,
+    "workers": 12,
+    "threads_per_worker": 1,
+    "master_seed": 20261120,
+    "seed_components": "[master, scenario_index+1, n, rep_0based, stage_index+1, stream_index+1] in dgp.py",
+    "oracle": "not applicable; dependent errors and no independent-error efficiency benchmark",
+    "sandwich_rank_ad": "same adaptive slope weights and information correction; uses empirical cross-moments for Gaussian max-t"
+  }
+}

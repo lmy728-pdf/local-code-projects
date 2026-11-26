@@ -1,0 +1,569 @@
+{
+  "title": "Scenario A — Spline Ridge",
+  "paper": "sources/Rank DML.tex",
+  "paper_sha256": "edb5b604cf2c3d0d3678dcff4d51679965bd1efefe5cb3821fdc7ec91706b38c",
+  "scientific_signature": "2724215667d90a84022ead0f5d5103580ed71d9715cabdb69cbad230a700aa95",
+  "version": "scenario-a-20261118-v1",
+  "learner": "squared-loss Spline Ridge",
+  "p": 10,
+  "folds": 5,
+  "theta0": 1,
+  "workers": 12,
+  "numerical_threads": 1,
+  "target": 36000,
+  "reusable": 10000,
+  "new_required": 26000,
+  "methods": [
+    "OLS",
+    "Huber",
+    "LAD",
+    "CQR",
+    "Bickel",
+    "Rank-W",
+    "Rank-N",
+    "Rank-Ad",
+    "Oracle"
+  ],
+  "laws": [
+    "gaussian",
+    "logistic",
+    "t3",
+    "contaminated",
+    "bimodal",
+    "sln075",
+    "sln100_tau050",
+    "t15",
+    "cauchy"
+  ],
+  "conditions": [
+    {
+      "n": 1000,
+      "law": "gaussian",
+      "target": 2000,
+      "reusable": 1000,
+      "new_required": 1000,
+      "completed_main": 2000,
+      "status": "EXTEND"
+    },
+    {
+      "n": 1000,
+      "law": "logistic",
+      "target": 2000,
+      "reusable": 0,
+      "new_required": 2000,
+      "completed_main": 2000,
+      "status": "NEW"
+    },
+    {
+      "n": 1000,
+      "law": "t3",
+      "target": 2000,
+      "reusable": 1000,
+      "new_required": 1000,
+      "completed_main": 2000,
+      "status": "EXTEND"
+    },
+    {
+      "n": 1000,
+      "law": "contaminated",
+      "target": 2000,
+      "reusable": 0,
+      "new_required": 2000,
+      "completed_main": 2000,
+      "status": "NEW"
+    },
+    {
+      "n": 1000,
+      "law": "bimodal",
+      "target": 2000,
+      "reusable": 0,
+      "new_required": 2000,
+      "completed_main": 2000,
+      "status": "NEW"
+    },
+    {
+      "n": 1000,
+      "law": "sln075",
+      "target": 2000,
+      "reusable": 1000,
+      "new_required": 1000,
+      "completed_main": 2000,
+      "status": "EXTEND"
+    },
+    {
+      "n": 1000,
+      "law": "sln100_tau050",
+      "target": 2000,
+      "reusable": 1000,
+      "new_required": 1000,
+      "completed_main": 2000,
+      "status": "EXTEND"
+    },
+    {
+      "n": 1000,
+      "law": "t15",
+      "target": 2000,
+      "reusable": 0,
+      "new_required": 2000,
+      "completed_main": 2000,
+      "status": "NEW"
+    },
+    {
+      "n": 1000,
+      "law": "cauchy",
+      "target": 2000,
+      "reusable": 0,
+      "new_required": 2000,
+      "completed_main": 2000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "gaussian",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 500,
+      "law": "logistic",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "t3",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 500,
+      "law": "contaminated",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "bimodal",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "sln075",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 500,
+      "law": "sln100_tau050",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "t15",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 500,
+      "law": "cauchy",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "gaussian",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 2000,
+      "law": "logistic",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "t3",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 2000,
+      "law": "contaminated",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "bimodal",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "sln075",
+      "target": 1000,
+      "reusable": 1000,
+      "new_required": 0,
+      "completed_main": 1000,
+      "status": "REUSE"
+    },
+    {
+      "n": 2000,
+      "law": "sln100_tau050",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "t15",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    },
+    {
+      "n": 2000,
+      "law": "cauchy",
+      "target": 1000,
+      "reusable": 0,
+      "new_required": 1000,
+      "completed_main": 1000,
+      "status": "NEW"
+    }
+  ],
+  "assistant_scope": "audit + implementation + smoke + deterministic validation only; user starts pilot/main",
+  "formal_completed": 36000,
+  "pilot_completed": 0,
+  "stage_seed_namespaces": [
+    "smoke",
+    "pilot",
+    "main"
+  ],
+  "historical_inputs": "cache/reused_inputs.sqlite",
+  "record_checkpoint_batch": 10,
+  "output_root": "this directory; all paths are resolved relative to the code",
+  "old_second_stage_reused": false,
+  "launch_mode": "one notebook per n/law; pilot/main require exactly one explicit condition",
+  "notebooks": [
+    {
+      "id": "A01",
+      "n": 1000,
+      "law": "gaussian",
+      "label": "Gaussian",
+      "target": 2000,
+      "reuse": 1000,
+      "new": 1000,
+      "notebook": "分组实验/A01_n1000_gaussian/A01实验_代码/A01_n1000_gaussian.ipynb"
+    },
+    {
+      "id": "A02",
+      "n": 1000,
+      "law": "logistic",
+      "label": "Logistic",
+      "target": 2000,
+      "reuse": 0,
+      "new": 2000,
+      "notebook": "分组实验/A02_n1000_logistic/A02实验_代码/A02_n1000_logistic.ipynb"
+    },
+    {
+      "id": "A03",
+      "n": 1000,
+      "law": "t3",
+      "label": "t(3)",
+      "target": 2000,
+      "reuse": 1000,
+      "new": 1000,
+      "notebook": "分组实验/A03_n1000_t3/A03实验_代码/A03_n1000_t3.ipynb"
+    },
+    {
+      "id": "A04",
+      "n": 1000,
+      "law": "contaminated",
+      "label": "Contaminated normal",
+      "target": 2000,
+      "reuse": 0,
+      "new": 2000,
+      "notebook": "分组实验/A04_n1000_contaminated/A04实验_代码/A04_n1000_contaminated.ipynb"
+    },
+    {
+      "id": "A05",
+      "n": 1000,
+      "law": "bimodal",
+      "label": "Bimodal",
+      "target": 2000,
+      "reuse": 0,
+      "new": 2000,
+      "notebook": "分组实验/A05_n1000_bimodal/A05实验_代码/A05_n1000_bimodal.ipynb"
+    },
+    {
+      "id": "A06",
+      "n": 1000,
+      "law": "sln075",
+      "label": "sln(0.75,0.2)",
+      "target": 2000,
+      "reuse": 1000,
+      "new": 1000,
+      "notebook": "分组实验/A06_n1000_sln075/A06实验_代码/A06_n1000_sln075.ipynb"
+    },
+    {
+      "id": "A07",
+      "n": 1000,
+      "law": "sln100_tau050",
+      "label": "sln(1,0.5)",
+      "target": 2000,
+      "reuse": 1000,
+      "new": 1000,
+      "notebook": "分组实验/A07_n1000_sln100_tau050/A07实验_代码/A07_n1000_sln100_tau050.ipynb"
+    },
+    {
+      "id": "A08",
+      "n": 1000,
+      "law": "t15",
+      "label": "t(1.5)",
+      "target": 2000,
+      "reuse": 0,
+      "new": 2000,
+      "notebook": "分组实验/A08_n1000_t15/A08实验_代码/A08_n1000_t15.ipynb"
+    },
+    {
+      "id": "A09",
+      "n": 1000,
+      "law": "cauchy",
+      "label": "Cauchy",
+      "target": 2000,
+      "reuse": 0,
+      "new": 2000,
+      "notebook": "分组实验/A09_n1000_cauchy/A09实验_代码/A09_n1000_cauchy.ipynb"
+    },
+    {
+      "id": "A10",
+      "n": 500,
+      "law": "gaussian",
+      "label": "Gaussian",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A10_n500_gaussian/A10实验_代码/A10_n500_gaussian.ipynb"
+    },
+    {
+      "id": "A11",
+      "n": 500,
+      "law": "logistic",
+      "label": "Logistic",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A11_n500_logistic/A11实验_代码/A11_n500_logistic.ipynb"
+    },
+    {
+      "id": "A12",
+      "n": 500,
+      "law": "t3",
+      "label": "t(3)",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A12_n500_t3/A12实验_代码/A12_n500_t3.ipynb"
+    },
+    {
+      "id": "A13",
+      "n": 500,
+      "law": "contaminated",
+      "label": "Contaminated normal",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A13_n500_contaminated/A13实验_代码/A13_n500_contaminated.ipynb"
+    },
+    {
+      "id": "A14",
+      "n": 500,
+      "law": "bimodal",
+      "label": "Bimodal",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A14_n500_bimodal/A14实验_代码/A14_n500_bimodal.ipynb"
+    },
+    {
+      "id": "A15",
+      "n": 500,
+      "law": "sln075",
+      "label": "sln(0.75,0.2)",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A15_n500_sln075/A15实验_代码/A15_n500_sln075.ipynb"
+    },
+    {
+      "id": "A16",
+      "n": 500,
+      "law": "sln100_tau050",
+      "label": "sln(1,0.5)",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A16_n500_sln100_tau050/A16实验_代码/A16_n500_sln100_tau050.ipynb"
+    },
+    {
+      "id": "A17",
+      "n": 500,
+      "law": "t15",
+      "label": "t(1.5)",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A17_n500_t15/A17实验_代码/A17_n500_t15.ipynb"
+    },
+    {
+      "id": "A18",
+      "n": 500,
+      "law": "cauchy",
+      "label": "Cauchy",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A18_n500_cauchy/A18实验_代码/A18_n500_cauchy.ipynb"
+    },
+    {
+      "id": "A19",
+      "n": 2000,
+      "law": "gaussian",
+      "label": "Gaussian",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A19_n2000_gaussian/A19实验_代码/A19_n2000_gaussian.ipynb"
+    },
+    {
+      "id": "A20",
+      "n": 2000,
+      "law": "logistic",
+      "label": "Logistic",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A20_n2000_logistic/A20实验_代码/A20_n2000_logistic.ipynb"
+    },
+    {
+      "id": "A21",
+      "n": 2000,
+      "law": "t3",
+      "label": "t(3)",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A21_n2000_t3/A21实验_代码/A21_n2000_t3.ipynb"
+    },
+    {
+      "id": "A22",
+      "n": 2000,
+      "law": "contaminated",
+      "label": "Contaminated normal",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A22_n2000_contaminated/A22实验_代码/A22_n2000_contaminated.ipynb"
+    },
+    {
+      "id": "A23",
+      "n": 2000,
+      "law": "bimodal",
+      "label": "Bimodal",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A23_n2000_bimodal/A23实验_代码/A23_n2000_bimodal.ipynb"
+    },
+    {
+      "id": "A24",
+      "n": 2000,
+      "law": "sln075",
+      "label": "sln(0.75,0.2)",
+      "target": 1000,
+      "reuse": 1000,
+      "new": 0,
+      "notebook": "分组实验/A24_n2000_sln075/A24实验_代码/A24_n2000_sln075.ipynb"
+    },
+    {
+      "id": "A25",
+      "n": 2000,
+      "law": "sln100_tau050",
+      "label": "sln(1,0.5)",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A25_n2000_sln100_tau050/A25实验_代码/A25_n2000_sln100_tau050.ipynb"
+    },
+    {
+      "id": "A26",
+      "n": 2000,
+      "law": "t15",
+      "label": "t(1.5)",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A26_n2000_t15/A26实验_代码/A26_n2000_t15.ipynb"
+    },
+    {
+      "id": "A27",
+      "n": 2000,
+      "law": "cauchy",
+      "label": "Cauchy",
+      "target": 1000,
+      "reuse": 0,
+      "new": 1000,
+      "notebook": "分组实验/A27_n2000_cauchy/A27实验_代码/A27_n2000_cauchy.ipynb"
+    }
+  ],
+  "formal_status": "27/27 complete; 36000 replications; user-run results collected"
+}

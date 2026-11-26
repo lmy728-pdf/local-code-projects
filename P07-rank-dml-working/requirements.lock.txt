@@ -1,0 +1,4 @@
+# Runtime: Python 3.14.6, Windows AMD64 (recorded in each stage config)
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.1
